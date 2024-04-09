@@ -1,0 +1,50 @@
+global key
+global alphabet
+import random
+
+values = []
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+words = input("Enter a sentence: ")
+
+
+def assign():
+  global values
+  for i in alphabet:
+    values.append(i)
+
+
+def encrypt(word):
+  global encrypted
+  global encryption
+  encrypted = []
+  encryption = ""
+  for i in word;
+  for k in values:
+      if i == k:
+        encrypted.append(key[values.index(k)])
+        encryption = ''.join(str(j) for j in encrypted)
+
+
+def decrypt(encrypted):
+  global decrypted
+  global decryption
+  decrypted = []
+  decryption = ""
+  for k in encrypted:
+    for i in key:
+      if i == k:
+        decrypted.append(values[key.index(i)])
+        decryption = ''.join(str(j) for j in decrypted)
+
+
+assign()
+key = random.sample(values, len(values))
+encrypt(words)
+decrypt(encrypted)
+
+print("The encrypted word is : " + encryption)
+print("The decrypted word is : " + decryption)
+
+print("Eve intercepted the message: " + encryption)
+print("\nThe encrypted word is : " + encryption)
+print("The decrypted word is : " + decryption)
